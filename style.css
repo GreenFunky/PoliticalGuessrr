@@ -1,0 +1,241 @@
+/* Base */
+html, body, #map {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Titre principal */
+header {
+  background-color: #e0e0e0;
+  padding: 20px 0;
+  text-align: center;
+  
+  
+}
+
+header h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+/* Barre d'informations */
+#infoBar {
+  position: fixed;
+  bottom: 00;
+  left: 0;
+  width: 100%;
+  background: #d6d6d6;
+  border-top: 3px solid #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-family: sans-serif;
+  z-index: 999;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Infos dirigeant */
+.leaderInfo {
+  display: flex;
+  align-items: center;
+}
+
+.leaderInfo img {
+  height: 300px;
+  border-radius: 7px;
+  margin-right: 10px;
+}
+
+.infoText {
+  position: fixed;
+  bottom: 25%;             
+  right: 3%;              
+  max-width: 25%;         
+  font-size: 20px;
+  line-height: 1.4;
+  border: 2px solid #223344;
+  padding: 10px;
+  background-color: #a2bedb;
+  z-index: 1000;
+}
+
+.infoText2 {
+  position: fixed;
+  bottom: 25%;             
+  right: 20%;              
+  max-width: 25%;         
+  font-size: 20px;
+  line-height: 1.4;
+  border: 2px solid #223344;
+  padding: 10px;
+  background-color: #a2bedb;
+  z-index: 1000;
+}
+
+
+
+
+/* Entrée utilisateur */
+.inputSection {
+  display: flex;
+  align-items: center;
+  margin: 80px;
+}
+
+.inputSection label {
+  margin-right: 10px;
+}
+
+.inputSection input {
+  width: 60px;
+  margin-right: 10px;
+}
+
+#scoreDisplay {
+  margin-left: 0px;
+  position: fixed;
+  bottom: 100px;
+  font-weight: bold;
+}
+
+#bestScoreDisplay {
+  margin-left: 0px;
+  position: fixed;
+  bottom: 40px;
+  font-weight: bold;
+  color: red;
+}
+
+/* Conteneur © */
+.copyright {
+  position: fixed;
+  top: 3%;
+  right: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ff0000;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-family: sans-serif;
+  cursor: pointer;
+  z-index: 10000; /* très haut */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Tooltip (infobulle) */
+.copyright .tooltip {
+  visibility: hidden;
+  opacity: 0;
+  width: 270px;
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 20px 25px; /* espace intérieur */
+  position: fixed;
+  top: 70px;
+  right: 10px;
+  transition: opacity 0.3s;
+  font-size: 15px;
+  z-index: 10001;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  line-height: 1.6;
+}
+
+/* Affichage de la tooltip au survol */
+.copyright:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Bouton "Règles" */
+.rules-button {
+  position: fixed;
+  top: 4%;                 /* Environ à hauteur du bouton sur ta capture */
+  left: 2%;                 /* Collé à gauche avec un petit espace */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 10000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Fond de la modale */
+.rules-modal {
+  display: none; /* masquée au début */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 11000;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Bloc central des règles */
+.rules-content {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  text-align: left;
+  font-family: sans-serif;
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.rules-content h2 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+.rules-content button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+#validateBtn {
+  background-color: #2f7bff; /* Vert élégant */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#validateBtn:hover {
+  background-color: #0cb714;
+  transform: scale(1.03);
+}
+
