@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PoliticalGessr</title>
+    <link rel="icon" href="https://openlayers.org/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>PoliticalGuessr (2025)</h1>
+    </header>
+
+    <div id="map"></div>
+
+    <div id="infoBar">
+      <div class="leaderInfo">
+        <img id="leaderImage" src="" alt="Dirigeant" />
+        <span id="leaderName"><strong>Chargement...</strong></span>
+      </div>
+
+
+      <div id="eloDisplay" class="infoText">
+        <strong>ELO : 1500 (Argent)</strong>
+        
+      </div>
+      <div class="inputSection">
+        <label for="democracyIndex">Indice de démocratie (0 – 10):</label>
+        <input id="democracyIndex" type="number" min="0" max="10" step="0.01" />
+        <button id="validateBtn">Valider</button>
+        <div id="scoreDisplay">Score (max par guess 10000) : 0</div>
+        <div id="bestScoreDisplay">Meilleur score : 0</div>
+      </div>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+
+    <div class="copyright">
+    $
+    <span class="tooltip">
+    <p>
+    Soutenir le développement :<br>
+    IBAN: MX XXXX XXXX XXXX XXXX</p>
+    </span>
+
+    <!-- Bouton d'ouverture des règles -->
+<button id="rulesBtn" class="rules-button">📘 Règles du jeu</button>
+
+<!-- Fenêtre modale -->
+<div id="rulesModal" class="rules-modal">
+  <div class="rules-content">
+    <h2>Règles du jeu</h2>
+    <p>
+      Clique sur le pays d’origine du dirigeant affiché, puis indique l’indice de démocratie de ce pays (entre 0 et 10).<br><br>
+      Cet indice prend en compte :<br>
+      🗳️ les élections<br>
+      🗣️ les libertés civiles<br>
+      🤝 le pluralisme<br>
+      🧠 la gouvernance<br>
+      🙋 la participation politique<br><br>
+      Plus votre estimation est proche de la valeur réelle, plus vous marquez de points (Max 5000)!
+
+      ✅+5000 pts si le bon pays est choisi ! 
+    </p>
+    <button id="closeRulesBtn">Fermer</button>
+  </div>
+  </div>
+    </div>
+    <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const rulesBtn = document.getElementById('rulesBtn');
+    const rulesModal = document.getElementById('rulesModal');
+    const closeRulesBtn = document.getElementById('closeRulesBtn');
+
+    rulesBtn.addEventListener('click', () => {
+      rulesModal.style.display = 'flex';
+    });
+
+    closeRulesBtn.addEventListener('click', () => {
+      rulesModal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+      if (e.target === rulesModal) {
+        rulesModal.style.display = 'none';
+      }
+    });
+  });
+  </script>
+  </body>
+</html>
