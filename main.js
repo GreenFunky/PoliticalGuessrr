@@ -65,7 +65,7 @@ function pickRandomLeader(leaders) {
   let leader;
   do {
     leader = leaders[Math.floor(Math.random() * leaders.length)];
-  } while (leader.Nom?.toLowerCase().includes("charles"));
+  } while (leader.Nom?.toLowerCase().includes("XXXX"));
   return leader;
 }
 
