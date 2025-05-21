@@ -1,5 +1,3 @@
-
-
 let totalScore = 0;
 let roundCount = 0;
 const maxRounds = 10;
@@ -13,33 +11,33 @@ let elo = parseInt(localStorage.getItem(eloKey)) || 600; // valeur initiale par 
 
 
 // 🗺️ Carte
-const map = new Map({
+const map = new ol.Map({
   target: 'map',
-  layers: [new TileLayer({ source: new OSM() })],
-  view: new View({ center: [0, 0], zoom: 2 })
+  layers: [new ol.TileLayer({ source: new ol.OSM() })],
+  view: new ol.View({ center: [0, 0], zoom: 2 })
 });
 
 // 🌍 Couche des pays
-const countryLayer = new VectorLayer({
-  source: new VectorSource({
+const countryLayer = new ol.VectorLayer({
+  source: new ol.VectorSource({
     url: './countries.geojson',
-    format: new GeoJSON()
+    format: new ol.GeoJSON()
   }),
-  style: new Style({
-    fill: new Fill({ color: 'rgba(200, 200, 200, 0.1)' }),
-    stroke: new Stroke({ color: 'gray', width: 1 })
+  style: new ol.Style({
+    fill: new ol.Fill({ color: 'rgba(200, 200, 200, 0.1)' }),
+    stroke: new ol.Stroke({ color: 'gray', width: 1 })
   })
 });
 map.addLayer(countryLayer);
 
 // 📍 Couche point rouge
-const clickLayer = new VectorLayer({
-  source: new VectorSource(),
-  style: new Style({
-    image: new CircleStyle({
+const clickLayer = new ol.VectorLayer({
+  source: new ol.VectorSource(),
+  style: new ol.Style({
+    image: new ol.CircleStyle({
       radius: 6,
-      fill: new Fill({ color: 'red' }),
-      stroke: new Stroke({ color: 'white', width: 1.5 })
+      fill: new ol.Fill({ color: 'red' }),
+      stroke: new ol.Stroke({ color: 'white', width: 1.5 })
     })
   }),
   zIndex: 1000
