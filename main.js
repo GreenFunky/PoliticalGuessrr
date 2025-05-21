@@ -108,7 +108,7 @@ map.on('singleclick', function (evt) {
   clickLayer.getSource().clear();
   selectedCountry = null;
 
-  const pointFeature = new Feature(new Point(evt.coordinate));
+  const pointFeature = new ol.Feature(new ol.geom.Point(evt.coordinate));
   clickLayer.getSource().addFeature(pointFeature);
 
   const features = countryLayer.getSource().getFeatures();
