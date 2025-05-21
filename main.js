@@ -1,13 +1,4 @@
-import Map from 'https://cdn.jsdelivr.net/npm/ol@latest/Map.js';
-import View from 'https://cdn.jsdelivr.net/npm/ol@latest/View.js';
-import TileLayer from 'https://cdn.jsdelivr.net/npm/ol@latest/layer/Tile.js';
-import OSM from 'https://cdn.jsdelivr.net/npm/ol@latest/source/OSM.js';
-import VectorLayer from 'https://cdn.jsdelivr.net/npm/ol@latest/layer/Vector.js';
-import VectorSource from 'https://cdn.jsdelivr.net/npm/ol@latest/source/Vector.js';
-import GeoJSON from 'https://cdn.jsdelivr.net/npm/ol@latest/format/GeoJSON.js';
-import { Fill, Stroke, Style, Circle as CircleStyle } from 'https://cdn.jsdelivr.net/npm/ol@latest/style.js';
-import Feature from 'https://cdn.jsdelivr.net/npm/ol@latest/Feature.js';
-import Point from 'https://cdn.jsdelivr.net/npm/ol@latest/geom/Point.js';
+
 
 let totalScore = 0;
 let roundCount = 0;
