@@ -55,15 +55,19 @@ header h1 {
 
 .infoText {
   position: fixed;
-  bottom: 25%;             
-  right: 3%;              
-  max-width: 25%;         
-  font-size: 20px;
-  line-height: 1.4;
+  bottom: 25%;
+  right: 3%;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espace entre le texte et le bouton */
+  padding: 10px 12px;
   border: 2px solid #223344;
-  padding: 10px;
   background-color: #a2bedb;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
   z-index: 1000;
+  white-space: nowrap;
 }
 
 .infoText2 {
@@ -252,6 +256,7 @@ header h1 {
   transition: background-color 0.3s ease, transform 0.2s ease;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   margin-left: 10px;
+  white-space: nowrap;
 }
 
 .btn:hover {
