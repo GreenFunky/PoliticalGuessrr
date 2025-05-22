@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WORLD ELO RANKING</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style-ELO-page.css">
+</head>
+<body>
+  <div class="info-message">
+  ⚠️ Le mode en ligne des joueurs est actuellement en cours de développement. Revenez bientôt !
+  </div>
+  <a href="index.html" class="back-button">⬅ Retour au jeu PoliticalGuessr</a>
+
+  <h1>WORLD ELO RANKING</h1>
+
+  <img src="./IMG/ELO.png" alt="Carte du monde" class="main-image">
+
+<section class="elo-explanation">
+  <h2>Comment fonctionne le ELO dans PoliticalGuessr© ?</h2>
+  <p>
+    Dans <strong>PoliticalGuessr</strong>, le <strong>ELO</strong> représente votre niveau général en géopolitique et en <strong>démocratie.<br><br>
+
+    Chaque joueur commence avec un ELO de base (<strong>600</strong>). Ensuite, à chaque partie jouée :
+    <ul>
+      <li>🎯 Vous marquez un score en fonction de vos réponses (pays et indice de démocratie).</li>
+      <li>📈 Si votre score est <strong>cohérent avec votre ELO</strong>, celui-ci augmente.</li>
+      <li>📉 Si votre performance est <strong>inférieure au niveau attendu</strong>, votre ELO diminue.</li>
+    </ul>
+     <p>
+      <br><br>
+    <strong>Voici comment le calcul d'ELO fonctionne :</strong>
+  </p>
+  <ul>
+    <li>Vous marquez un score pour chaque partie (max 100 000 points).</li>
+    <li>On calcule le <strong>score attendu</strong> selon votre ELO actuel : <code>score attendu = ELO × 20</code>.</li>
+    <li>La différence entre votre score réel et ce score attendu détermine la variation de votre ELO.</li>
+    <li>Cette variation est divisée par 200 pour l’adoucir : <code>variation = (score réel - score attendu) ÷ 200</code>.</li>
+    <li>Enfin, la variation est limitée entre <strong>-75</strong> et <strong>+75</strong> points.</li>
+  </ul>
+  <br><br>
+
+    
+    Ainsi, plus votre ELO est élevé, plus vous devrez être <strong>précis et performant</strong> pour continuer à progresser. Ce système s’adapte donc à votre progression et valorise la régularité et la précision.
+  </p>
+
+  <h1>Bonne chance !</h1>
+  <h2>Developped by GreenFunky Sudios - PoliticalGuessr©</h2>
+
+
+
+</section>
+<br><br>
+<br><br>
+<br><br>
+</body>
+</html>
