@@ -250,7 +250,7 @@ const englishToFrenchMap = {
   "United Arab Emirates": "Émirats arabes unis", "United Kingdom": "Royaume-Uni", "United States of America": "États-Unis",
   "Uruguay": "Uruguay", "Uzbekistan": "Ouzbékistan", "Vatican": "Vatican", "Venezuela": "Venezuela",
   "Vietnam": "Viêt Nam", "Yemen": "Yémen", "Zambia": "Zambie", "Zimbabwe": "Zimbabwe", "East Timor": "Timor-Oriental" , "Greenland" : "Groenland", "Palestine": "Palestine", "Vanuatu" : "Vanuatu", "French Southern And Antarctic Lands": "French Southern And Antarctic Lands" , "Antarctica" : "Antartique", 
-   "The Bahamas" : "Bahamas", "Puerto Rico" : "Porto Rico", "Bermuda": "Bermudes", "New Caledonia": "Nouvelle-Calédonie"
+   "The Bahamas" : "Bahamas", "Puerto Rico" : "Porto Rico", "Bermuda": "Bermudes", "New Caledonia": "Nouvelle-Calédonie", "Solomon Islands" : "Iles Salomon"
 };
 
 // ✅ Bouton "Valider"
